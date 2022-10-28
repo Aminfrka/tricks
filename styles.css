@@ -1,0 +1,172 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  appearance: none;
+}
+
+body {
+  background: linear-gradient(99deg, rgb(199, 67, 16), rgb(129, 72, 6))
+    no-repeat center center/cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+img {
+  width: 30rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+.container {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.circle {
+  width: 80rem;
+  height: 80rem;
+  border-radius: 50%;
+  background-color: aliceblue;
+  position: absolute;
+  right: -32rem;
+  top: -10rem;
+  box-shadow: 10px 10px 20px 0 rgba(17, 16, 16, 0.26),
+    -10px -10px 20px 0 rgba(19, 18, 18, 0.247);
+  border: 1px solid rgb(10, 6, 4);
+}
+
+.content-circle {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  padding: 3rem;
+  border-radius: 50%;
+  background-color: black;
+  box-shadow: 10px 10px 20px 0 rgba(17, 16, 16, 0.26),
+    -10px -10px 20px 0 rgba(19, 18, 18, 0.247);
+}
+
+.cir {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation: turn 8s linear forwards infinite;
+}
+
+@keyframes turn {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* selecting html elements */
+
+.btn {
+  padding: 1rem 2rem;
+  display: inline-block;
+  background-color: brown;
+  box-shadow: 5px 5px 10px 0 grey;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: rgba(211, 130, 130, 0.404);
+}
+
+[href]::selection {
+  color: green;
+  background-color: antiquewhite;
+}
+
+[href$=".com"] {
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+[data-time="information" i] {
+  color: rgb(230, 214, 214);
+  margin: 13px;
+}
+
+[data-time="information" i]::before {
+  content: "*****";
+  color: rebeccapurple;
+}
+[data-time="information" i]::after {
+  content: "*****";
+  color: blue;
+}
+
+ul {
+  margin-left: 50px;
+}
+
+li:first-of-type {
+  color: rebeccapurple;
+}
+
+li::selection > li::marker {
+  color: red;
+  font-size: 2rem;
+}
+
+li::selection {
+  color: aqua;
+}
+
+.top {
+  /* border: 1px solid;
+  width: 400px;
+  margin-left: 20px; */
+  padding-left: 1rem;
+}
+
+/* .top > div {
+  padding-left: 2rem;
+}
+
+.top p {
+  padding-left: 0.3rem;
+}
+
+.top div {
+  border: 1px solid;
+  padding-left: -90px;
+} */
+
+.btn-container {
+  position: relative;
+  width: 100px;
+  height: 40px;
+  background-color: blueviolet;
+  margin-left: 90px;
+  border-radius: 50px;
+  box-shadow: -10px -10px 1px rgb(190, 123, 123);
+}
+
+.btn-circle {
+  margin: auto;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: aqua;
+  display: inline-block;
+  position: absolute;
+  /* top: 0;
+  left: 0; */
+  transition: all 0.3s ease;
+  /* transform: translateX(0%); */
+  border: 5px solid rgba(105, 81, 81, 0.452);
+}
+
+input:checked ~ .btn-container label .btn-circle {
+  background-color: black;
+  transform: translateX(150%);
+  /* right: 0; */
+}
