@@ -162,7 +162,7 @@ li::selection {
   left: 0; */
   transition: all 0.3s ease;
   /* transform: translateX(0%); */
-  border: 5px solid rgba(105, 81, 81, 0.452);
+  border: 5px solid rgba(26, 25, 25, 0.452);
 }
 
 input:checked ~ .btn-container label .btn-circle {
